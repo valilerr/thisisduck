@@ -3,6 +3,7 @@ import pygame
 class SceneManager:
     def __init__(self):
         self.scenes = {}
+        self.prev_scene = None
         self.current_scene = None
 
     def add_scene(self, name, scene):
@@ -15,7 +16,8 @@ class SceneManager:
 
     def start_scene(self, name):
         if self.scenes.get(name):
-            self.current_scene = self.scenes[name]()
+            self.prev_scene = self.current_scene
+            self.current_scene = self.scenes[name](self)
             print(f'Scene [{name}] started.')
         else:
             print(f'Scene [{name}] not found.')

@@ -8,7 +8,7 @@ class Button:
         self.text = text
         self.is_hovered = False
         self.hover_status = 0
-        self.font = pygame.font.Font('fonts/Unbounded-Regular.ttf', 16)
+        self.font = pygame.font.Font('fonts/Unbounded-Medium.ttf', 16)
 
     def draw(self, screen):
         color = self.hover_color if self.is_hovered else self.color

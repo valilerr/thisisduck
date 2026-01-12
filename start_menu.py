@@ -3,7 +3,7 @@ from scene import Scene
 from ui_elements.button import Button
 
 class StartMenu(Scene):
-    def __init__(self):
+    def __init__(self, scene_manager):
         self.title = pygame.font.Font('fonts/Unbounded-Medium.ttf', 25).render('This Is Duck!', True, (200, 200, 200))
         self.play_button = Button((300, 275), (200, 50), 'Играть')
 

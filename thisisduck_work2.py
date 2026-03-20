@@ -1,5 +1,4 @@
 from time import sleep
-import matplotlib.pyplot as plt
 
 class ThisIsDuck:
     def __init__(self):
